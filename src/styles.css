@@ -1,3 +1,90 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightblue;
+}
+li {
+  list-style: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+/* navbar */
+.navbar {
+  background-color: darkcyan;
+}
+.container {
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo in navbar */
+.logo {
+  color: white;
+  font-size: 2rem;
+  margin-left: 1rem;
+  /* flex: 1; */
+}
+.nav-buttons {
+  display: flex;
+  /* flex: 1; */
+  /* justify-content: center; */
+}
+ul {
+  display: flex;
+}
+
+[data-selected="true"] {
+  color: yellow;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.box {
+  height: min-content;
+  width: 30vw;
+  background-color: antiquewhite;
+  margin-top: 3rem;
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+.nav-buttons {
+  position: relative;
+  flex: 1;
+  justify-content: center;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/*about us*/
+.values-card,
+.contact-card {
+  margin-top: 2rem;
+  width: 30%;
+  background-color: beige;
+  padding: 1rem;
+  border-radius: 2rem;
+}

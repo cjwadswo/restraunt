@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -5,6 +6,8 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
+    assetModuleFilename: "[name][ext]",
   },
   mode: "development",
   module: {
@@ -21,6 +24,20 @@ module.exports = {
           "postcss-loader",
         ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
   },
+  devServer: {
+    watchFiles: ["src/*.html"],
+    hot: true,
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Restraunt",
+      template: "./src/template.html",
+    }),
+  ],
 };

@@ -4,18 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="main.js" defer></script>
     <title>Document</title>
-  </head>
-  <body class="bg-cyan-500">
-    <nav class="p-5 bg-white shadow md:flex md:justify-center">
-      <ul class="md:flex md:items-center md:justify-center">
-        <li id="Home" class="m-4">Home</li>
-        <li id="menu" class="m-4">Menu</li>
-        <li id="contact" class="m-4">Contact</li>
-      </ul>
-    </header>
-    <div id="content"></div>
-    <script src="main.js"></script>
+  <script defer src="main.js"></script></head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">Restraunt</div>
+
+        <ul class="nav-buttons">
+          <li>
+            <a id="home" href="#" data-selected="true">Home</a>
+          </li>
+          <li>
+            <a id="About" href="#">About</a>
+          </li>
+          <li>
+            <a id="contact" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="content">
+      <div class="box">
+        <h2>Welcome to the restraunt!</h2>
+        <p>Our food is the best! Thank you for checking us out!</p>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img id="img1" src="./image1.jpg" alt="" />
+          <img id="img2" src="./image2.jpg" alt="" />
+          <img id="img3" src="./image3.jpg" alt="" />
+        </div>
+        <button id="prevButton">Prev</button>
+        <button id="nextButton">Next</button>
+      </div>
+    </main>
   </body>
 </html>
